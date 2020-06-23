@@ -1,1 +1,1 @@
-web: gunicorn Practice:Practice
+web: gunicorn Practice:app
