@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='new.css') }}">
+<!--    <style>-->
+<!--    #btn{-->
+<!--    width:250px;-->
+<!--    height:30px;-->
+<!--    align:center;-->
+<!--    margin:20px;-->
+<!--    background-color:rgb(221,160,221);-->
+<!--    border:2px solid black;-->
+<!--    border-radius:20px;-->
+<!--    text-align:center;-->
+
+<!--    }-->
+<!--    #sub{-->
+<!--    width:10em;-->
+<!--    height:2em;-->
+<!--align:center;-->
+<!--    border:2px solid red;-->
+<!--    border-radius:10px;-->
+<!--    background-color:rgb(65,105,225);-->
+
+<!--    }-->
+
+<!--        .kali{-->
+<!--border:4px solid red;-->
+<!--background-color:rgb(199,21,133);-->
+<!--border-radius:50px;-->
+
+<!--text-align:center;-->
+<!--margin:60px auto;-->
+<!--width:700px;-->
+<!--height:300px;-->
+
+
+<!--font-size:20px;-->
+<!--}-->
+<!--body{-->
+<!--background-color:rgb(30,144,255);-->
+<!--    font-family: 'Open Sans', sans-serif;-->
+<!--}-->
+<!--.hd{-->
+<!--text-align:center;}-->
+<!--    </style>-->
+</head>
+<body>
+<h1 class="hd"> Salary Prediction Based on Years of Experience</h1>
+<div class="kali">
+    <h3> Please Write Your Years of Experience</h3>
+    <form action="{{ url_for('predict')}}" method="post">
+        <div>
+         Years of Exprience:<input type="number" name="year" id="btn"></div>
+        <br>
+        <div>
+        <input type="submit" value="Submit" id="sub"></div>
+
+    </form>
+
+</div>
+{% with messages=get_flashed_messages() %}
+   {% if messages %}
+     {% for msg in messages %}
+        <h3 class="hd">{{msg}}</h3>
+     {% endfor %}
+   {% endif %}
+{% endwith %}
+
+</body>
+</html>
