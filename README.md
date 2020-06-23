@@ -1,0 +1,2 @@
+# regression-model-deployment
+This is a repository which contains A to Z implementation of regression  model using Salary_Data csv.This Dataset is avilable at official website of Kaggle. I have created a model using LinearRegression Class of sklearn.linear_model module.Then i have train my model with dependent and independent features. I have stored this model variable in pickle file. This whole i have implimented on flask platform and all the codes and css and html file are give in this repository 
